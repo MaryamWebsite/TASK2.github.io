@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <title> JS Example </title>
+    <p>
+        Enter Your Name:
+        <input type="text" id="name">
+        <button onclick="time()"> OK </button>
+    </p>
+    <p id="p"></p>
+
+    <script>
+        function time() {
+            var Name = document.getElementById("name").value;
+            var Hour = new Date().getHours();
+            var greet;
+
+            if (Hour < 12)
+                greet = 'Good Morning,';
+            else
+                if (Hour >= 12 && Hour <= 24)
+                    greet = 'Good Afternoon,';
+
+            document.getElementById('p').innerHTML = '<h3>' + greet + '&nbsp;' + Name  + '</h3>';
+        }
+
+    </script>
+</body>
+</html>
